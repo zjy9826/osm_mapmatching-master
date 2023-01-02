@@ -36,9 +36,9 @@ print("osmnx version",ox.__version__)
 # G = ox.graph_from_polygon(boundary_polygon, network_type='drive')
 # G = ox.graph_from_bbox(22.9837, 22.1365, 114.976, 113.3487, network_type = 'drive')
 ###############################
-G = ox.graph_from_bbox(40.05, 39.90, 116.60, 116.45, network_type = 'drive')
+G = ox.graph_from_bbox(40.05, 39.90, 116.60, 116.45, network_type = 'drive')   # 空间经纬范围。根据所需来设置
 start_time = time.time()
-save_graph_shapefile_directional(G, filepath='./network-small-1d')
+save_graph_shapefile_directional(G, filepath='./network-small-1d')  # shapefile文件保存路径
 print("--- %s seconds ---" % (time.time() - start_time))
 
 # # Download by place name
